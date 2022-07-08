@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/shortcut.png" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>gadgetNih | Konfirmasi Pembayaran</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
+        <div class="container">
+          <a class="navbar-brand" href="home.html"><img src="assets/img/logo.png" width="150" height="25" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="category.html">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="product.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="promocode.html">Promo Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">User 1</a>
+                          <a class="dropdown-item" href="account.html">Account</a>
+                          <div class="dropdown-divider"></div>
+                          <!-- saat tombol signout di klik akan mengahapus access_token, dan mengarahkan ke halaman index -->
+                          <a class="dropdown-item" href="#" onclick="localStorage.removeItem('access_token'); window.location.replace('index.html');">Sign Out</a>
+                        </div>
+                      </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="payment" class="d-flex justify-content-center align-items-center">
+        <div class="container position-relative" data-aos="fade-down"><br>
+            <div class="alert alert-success text-center" role="alert">
+                Berhasil Berlangganan !!!
+            </div><br><br>
+            
+            <div>
+                <div class="text-center" data-aos="fade-down" data-aos-delay="100">
+                    <div class="container-fluid">
+                        <img src="assets/img/suc.png" class="img-fluid" width="200px" alt="Responsive image" >
+                    </div><br>
+
+                    <div>
+                        <h1 class="display-4"><b>Selamat kamu telah berhasil membayar, mohon tunggu barang sampai</b></h1>
+                        <h3>
+                            <small class="text-muted">Pembayaranmu sudah berhasil</small>
+                        </h3>
+                    </div>
+                    
+                </div>
+                <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+                    <a href="home.html" class="btn btn-secondary btn-lg active mt-3" style="background-color: #145DA0" role="button" aria-pressed="true">
+                    Klik Disini untuk kembali ke Halaman Home</a><br><br><br><br><br>
+                </div>
+            </div>
+        </div>
+</section>
+<!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script>
+        var urlParams = new URLSearchParams(window.location.search);
+        let name = urlParams.get('name');
+        let price = urlParams.get('price');
+
+        $("#list").text(name)
+        $("#price").text('Rp. ' + price + ',-')
+    </script>
+</body>
+</html>

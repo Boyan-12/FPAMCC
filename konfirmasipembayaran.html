@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/img/shortcut.png" type="image/x-icon" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <title>gadgetNih | Konfirmasi Pembayaran</title>
+</head>
+<body>
+    <nav class="navbar navbar-dark fixed-top navbar-expand-md navbar-no-bg">
+        <div class="container">
+          <a class="navbar-brand" href="home.html"><img src="assets/img/logo.png" width="150" height="25" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="category.html">Category</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="product.html">Product</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="promocode.html">Promo Code</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link scroll-link" href="aboutus.html">About Us</a>
+                    </li>
+                    <li class="nav-item dropdown" >
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+                        </a>
+                        <div class="dropdown-menu">
+                          <a class="dropdown-item" href="#">User 1</a>
+                          <a class="dropdown-item" href="account.html">Account</a>
+                          <div class="dropdown-divider"></div>
+                          <!-- saat tombol signout di klik akan mengahapus access_token, dan mengarahkan ke halaman index -->
+                          <a class="dropdown-item" href="#" onclick="localStorage.removeItem('access_token'); window.location.replace('index.html');">Sign Out</a>
+                        </div>
+                      </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <section id="payment" class="d-flex justify-content-center align-items-center mt-5">
+        <div class="container position-relative mt-5" data-aos="fade-down"><br>
+            
+
+            <div class="card position-relative mt-5">
+                <div class="card-body">
+                <div class="text-center" data-aos="fade-down" data-aos-delay="100">
+                        <div class="container-fluid mt-5">
+                            <h1 class="display-4"><b>Konfirmasi Pembayaran</b></h1>
+                            <h3>
+                                <small class="text-muted">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="dana" name="customRadioInline1" class="custom-control-input">
+                                        <label class="custom-control-label" for="DANA">DANA</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="bri" name="customRadioInline1" class="custom-control-input">
+                                        <label class="custom-control-label" for="bri">Bank BRI</label>
+                                    </div>
+                                </small>
+                            </h3>
+                            <div class="custom-file col-md-5 rounded float-center mt-2">
+                                <input type="file" class="custom-file-input" id="customFile">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div class="text-center mt-4" data-aos="fade-up" data-aos-delay="100">
+                        <a href="payment.html"><input class="buttonpayment" type="reset" value="Cancel"></a>
+                        <a href="berhasil.html"><input class="buttonberhasil" style="background-color: #145DA0" type="submit" value="Save"></a>
+                    </div><br><br>
+                </div>
+                </div>
+            <div><br><br><br>
+                
+            
+
+
+        </div>
+</section>
+<!--Footer-->
+<div class="footer2">
+    <div class="row p-4"></div>
+    <hr style="height:2px; border:none; background-color:#A64942;">
+    <div class="row p-4"></div>
+    <div class="row text-center text-light">
+    <div class="col-md-3">
+        <h6></h6>
+    </div>
+    <div class="col-md-2">
+        <h6>About Us</h6>
+    </div>
+    <div class="col-md-2">
+        <h6>Privacy Policy</h6>
+    </div>
+    <div class="col-md-2">
+        <h6>Term and Use</h6>
+    </div>
+    </div>
+    <div class="row text-center m-3">
+    <div class="col-md-3">
+
+    </div>
+    <div class="col-md-2">
+        <a href="#"><i class="fab fa-instagram text-light"></i></a>
+    </div>
+    <div class="col-md-2">
+        <a href="#"><i class="fab fa-twitter text-light"></i></a>
+    </div>
+    <div class="col-md-2">
+        <a href="#"><i class="fab fa-facebook text-light"></i></a>
+    </div>  
+</div>
+
+<div class="row text-center m-3">
+  <div class="col-md-12">
+    <h6>Copyright© 2021 </h6>
+    <img src="assets/img/logo.png" height="30" alt="">
+  </div>
+</div>
+
+<!-- To Up-->
+</div>
+<div id="gotop"></div>
+<script src="./assets/js/jquery.gotop.js"></script>
+<script src="assets/js/category.js"></script>
+<script>
+
+$('#gotop').gotop({
+customHtml: '<i class="fa fa-angle-up fa-2x"></i>',
+bottom: '1em',
+right: '1em'
+});
+</script> 
+
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</main>
+</body>
+</html>
